@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { BookOpen, BookText, Calculator, Function, Home, PiSquare } from "lucide-react";
+import { BookOpen, BookText, Calculator, Home, PiSquare, FunctionSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -26,7 +26,7 @@ const Navbar = () => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger className="flex items-center gap-2">
-                <Function className="h-4 w-4" />
+                <FunctionSquare className="h-4 w-4" />
                 <span>Разделы</span>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -101,7 +101,7 @@ const sections = [
     title: "Степени и логарифмы",
     href: "#logarithms",
     description: "Степенные функции, логарифмы и их свойства",
-    icon: <Function className="h-4 w-4 text-primary" />
+    icon: <FunctionSquare className="h-4 w-4 text-primary" />
   },
   {
     title: "Уравнения и неравенства",
