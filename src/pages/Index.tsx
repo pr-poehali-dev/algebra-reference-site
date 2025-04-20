@@ -11,10 +11,10 @@ const Index = () => {
       <div className="flex-1">
         <Hero />
         
-        <div className="container my-8">
+        <div className="container my-6">
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <MathFormula 
-              name="Формула синуса двойного угла" 
+              name="Синус двойного угла" 
               formula="sin(2α) = 2sin(α)cos(α)"
             />
             <MathFormula 
@@ -32,27 +32,26 @@ const Index = () => {
         <AlgebraSection
           id="trigonometry"
           title="Тригонометрия"
-          description="Изучение тригонометрических функций и соотношений"
+          description="Тригонометрические функции и соотношения"
           topics={trigonometryTopics}
         />
         
         <AlgebraSection
           id="logarithms"
           title="Степени и логарифмы"
-          description="Изучение степенных функций и логарифмов"
+          description="Степенные функции и логарифмы"
           topics={logarithmTopics}
-          className="bg-accent/30"
         />
         
         <AlgebraSection
           id="equations"
           title="Уравнения и неравенства"
-          description="Методы решения алгебраических уравнений и неравенств"
+          description="Методы решения уравнений и неравенств"
           topics={equationTopics}
         />
       </div>
       
-      <footer className="border-t py-4 text-center text-xs text-muted-foreground">
+      <footer className="border-t py-3 text-center text-xs text-gray-500">
         © 2023 Справочник по алгебре | 10 класс
       </footer>
     </div>
@@ -65,42 +64,42 @@ const trigonometryTopics = [
     description: "Синус, косинус, тангенс и котангенс"
   },
   {
-    title: "Основные тригонометрические тождества",
-    description: "Соотношения между тригонометрическими функциями"
+    title: "Основные тождества",
+    description: "Соотношения между функциями"
   },
   {
     title: "Формулы приведения",
-    description: "Представление тригонометрических функций через функции острых углов"
+    description: "Тригонометрические функции через функции острых углов"
   }
 ];
 
 const logarithmTopics = [
   {
     title: "Свойства степеней",
-    description: "Основные свойства степеней с действительным показателем"
+    description: "Степени с действительным показателем"
   },
   {
-    title: "Логарифмы и их свойства",
-    description: "Определение и основные свойства логарифмов"
+    title: "Логарифмы",
+    description: "Определение и свойства логарифмов"
   },
   {
-    title: "Показательные и логарифмические уравнения",
-    description: "Методы решения показательных и логарифмических уравнений"
+    title: "Показательные уравнения",
+    description: "Методы решения уравнений"
   }
 ];
 
 const equationTopics = [
   {
-    title: "Линейные уравнения и неравенства",
-    description: "Методы решения линейных уравнений и неравенств"
+    title: "Линейные уравнения",
+    description: "Методы решения линейных уравнений"
   },
   {
     title: "Квадратные уравнения",
-    description: "Формулы и методы решения квадратных уравнений"
+    description: "Формулы решения квадратных уравнений"
   },
   {
     title: "Системы уравнений",
-    description: "Методы решения систем линейных и нелинейных уравнений"
+    description: "Методы решения систем уравнений"
   }
 ];
 

@@ -1,14 +1,9 @@
 
-import { cn } from "@/lib/utils";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
 interface AlgebraSectionProps {
   title: string;
   description: string;
   id: string;
   topics: AlgebraTopic[];
-  className?: string;
 }
 
 interface AlgebraTopic {
@@ -21,32 +16,20 @@ const AlgebraSection = ({
   description,
   id,
   topics,
-  className,
 }: AlgebraSectionProps) => {
   return (
-    <section id={id} className={cn("py-8", className)}>
+    <section id={id} className="py-6">
       <div className="container">
-        <div className="flex flex-col gap-4">
-          <div className="space-y-1">
-            <h2 className="text-2xl font-semibold">{title}</h2>
-            <p className="text-sm text-muted-foreground">{description}</p>
-          </div>
+        <h2 className="text-xl font-semibold mb-2">{title}</h2>
+        <p className="text-sm text-muted-foreground mb-4">{description}</p>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {topics.map((topic) => (
-              <Card key={topic.title} className="hover:shadow-sm transition-all">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-base">{topic.title}</CardTitle>
-                  <CardDescription className="text-xs">{topic.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex justify-end pt-0">
-                  <Button variant="ghost" size="sm" className="text-xs">
-                    Подробнее
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {topics.map((topic) => (
+            <div key={topic.title} className="border p-3 rounded">
+              <h3 className="font-medium mb-1">{topic.title}</h3>
+              <p className="text-sm text-gray-600">{topic.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
