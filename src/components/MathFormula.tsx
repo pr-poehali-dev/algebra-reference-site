@@ -1,16 +1,23 @@
+
 import { cn } from "@/lib/utils";
 
 interface MathFormulaProps {
+  name: string;
   formula: string;
   description?: string;
   className?: string;
 }
 
-const MathFormula = ({ formula, description, className }: MathFormulaProps) => {
+const MathFormula = ({ name, formula, description, className }: MathFormulaProps) => {
   return (
-    <div className={cn("flex flex-col items-center my-4 p-4 border rounded-md bg-secondary/50", className)}>
-      <div className="text-xl font-mono text-center py-2">{formula}</div>
-      {description && <p className="text-sm text-muted-foreground text-center">{description}</p>}
+    <div className={cn("p-3 border rounded-md bg-accent/30", className)}>
+      <div className="text-sm font-medium">{name}</div>
+      <div className="mt-1 p-2 bg-background rounded flex items-center justify-center">
+        <code className="text-base font-mono">{formula}</code>
+      </div>
+      {description && (
+        <p className="mt-2 text-xs text-muted-foreground">{description}</p>
+      )}
     </div>
   );
 };
